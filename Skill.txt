@@ -1,0 +1,115 @@
+- vòng lặp while() tương tự như đệ quy. Chỉ khác đệ quy thêm tham số
+
+
+-
+int i = 1;
+for(; i < n; i++)
+
+- Sử dụng thư viện để thực hiện sắp xếp. Collection
+	Interface Comparator(override phương thức Compare), Comparator.reverseOder : đảo ngược phương thức so sánh 	1046
+	Interface Comparable(override phương thức CompareTo)
+	Phương thức CompareTo.
+		So sánh 2 giá trị A và B
+		Nếu A = B return 0;
+		Nếu A > B return 1; (A đứng sau B)
+		Nếu A < B return -1; (A đứng trước B)
+
+	Để sắp xếp nên sử dụng interface Comparator. rồi override phương thức Compare
+	
+	Sắp xếp theo mảng Array 				Arrays.sort
+	Sắp xếp theo Collection(ArrayList, linkedList,...)	Collection.sort
+- Tìm kiếm nhị phân : Binary Search
+
+- Tìm kiếm tuần tự: dùng  Array
+
+
+- Kiểm tra tốc độ chạy của 2 cách thì sử dụng thư viện System.currentTimeMilles() bài "Giới thiệu về Time Complexity"
+
+- Khi so sánh giá trị nên tạo ra mảng để lưu giá trị
+
+
+- KỸ THUẬT CHIA ĐỂ TRỊ
+
+
+- KỸ THUẬT 2 CON TRỎ
+ CHO 2 MẢNG ĐÃ SẮP XẾP. SO SÁNH TỪNG VỊ TRÍ ĐẦU TIÊN (HOẶC CUỐI CÙNG) CỦA 2 MẢNG NẾU NHỎ HƠN (HOẶC LỚN HƠN )THÌ ADD VÀO MỘT MẢNG,RỒI TIẾP TỤC TĂNG DẦN(HOẶC GIẢM DÂN) VỊ TRÍ INDEX RÔIF TIẾP TỤC SO SÁNH
+
+
+- KỸ THUẬT DUYỆT 2 CHỈ SỐ TRÊN MỘT MẢNG
+	283 Array, 977 Array,
+- KỸ THUẬT SẮP XẾP TRÊN MỘT MẢNG
+	852, 977
+- Kỹ thuật đếm số lần xuất hiện bằng index chỉ trong range(phạm vi) nhỏ.
+	387 String, 448 Sorting
+- StringBuilderr 
+
+- PriorityQueue 
+	1636 Queue, 1046
+- KỸ THUẬT CHUYỂN ĐỔI KÝ TỰ THÀNH VỊ TRÍ INDEX
+	206 Trie
+
+- COPPY ARRAY
+int[] a = {1,4,5,3};
+int n = a.length;
+int[] copied = new int[n];
+
+for (int i = 0; i < n;i++) {
+	copied[i] = a[i];
+}
+
+- Các bài toán khó:
+	50 pow(chưa xử lý được)
+
+- Trung bình của 2 số:
+(A + B) /2
+A + ((B - A) /2)
+
+- Số mũ
+	x ^ n =     x ^ n /2    *     x ^ n /2
+	x ^ 5 = x * x ^ 2       *     x  ^ 2
+
+- replayAll thay thế cho ký tự bài 1694
+
+- loop String:    
+	String a = "abc";
+	String b = a.repeat(3) = "abcabcabc"
+
+- instanceof
+ a instanceof data		trả về true nếu a thuộc kiểu dữ liệu data
+
+- Recursion có thể nói là DFS
+
+- HashTable(Set, Map): nơi lưu giữ dữ liệu lớn
+
+- Set gồm interface set và 3 class HashSet, LinkedSet, TreeSet
+
+HashSet được cài đặt bằng Array
+LinkedSet được đặt bằng LinkedList
+TreeSet cđượcc ài đặt bằng Tree		1636
+
+- Đếm số lần xuất hiện, bao nhiêu cặp 		1512
+
+- Stack: cài đặt: thêm vào đuôi và lấy ra đuôi
+- Queue: cài đặt: thêm vào đuôi và lấy ra đầu
+
+- DFS: tìm kiếm theo chiều sâu. cài đặt với stack hoặc recursion
+- BFS: tìm kiếm theo chiều rộng. cài đặt với queue 
+
+- Graph: đồ thị
+	
+ 
+- Heap:		BinaryTree(Hoàn chỉnh hoặc gần hoàn chỉnh) + Condition(heap property)
+	
+	Có nhiều thao tác thêm/ xoá phần tử vào trong tập hợp
+	Tại mỗi thao tác đó luôn có nhu cầu tìm min/max
+	Heap Property:
+		+ Node cha >= Node con (Max-Heap)
+		+ Node cha <= Node con (Min-Heap)
+	Vì cấu trúc gần hoàn chỉnh nên có thể sử dụng mảng/array để lưu trữ
+	Vị trí index = 0; sẽ không được sử dụng trong Heap
+	Index Node con bên trái sẽ bằng = Node cha *2
+	Index  Node con bên phải sẽ bằng = Node cha *2 +1
+
+- số đối của một số sẽ bằng 		~A + 1(cộng vào cuối);
+VD: 	11		00001011
+	-11		10110101
